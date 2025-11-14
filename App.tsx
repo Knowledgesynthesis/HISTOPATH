@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import useStore from './store'
 import HomeScreen from './HomeScreen'
+import ModulesListScreen from './ModulesListScreen'
 import ModuleScreen from './ModuleScreen'
 import LessonScreen from './LessonScreen'
 import GlossaryScreen from './GlossaryScreen'
@@ -8,6 +9,7 @@ import SettingsScreen from './SettingsScreen'
 import CellInjurySimulator from './CellInjurySimulator'
 import InflammationSimulator from './InflammationSimulator'
 import AssessmentScreen from './AssessmentScreen'
+import CasesScreen from './CasesScreen'
 import { Settings, BookMarked, Home } from 'lucide-react'
 import { Button } from './Button'
 
@@ -44,7 +46,7 @@ export default function App() {
       case 'home':
         return <HomeScreen />
       case 'modules':
-        return <HomeScreen />
+        return <ModulesListScreen />
       case 'module':
         return <ModuleScreen />
       case 'lesson':
@@ -58,9 +60,13 @@ export default function App() {
       case 'inflammation-simulator':
         return <InflammationSimulator />
       case 'morphology-explorer':
-        return <CellInjurySimulator /> // Placeholder - use cell injury for now
+        return <CellInjurySimulator />
       case 'assessment':
         return <AssessmentScreen />
+      case 'cases':
+        return <CasesScreen />
+      case 'case':
+        return <CasesScreen />
       default:
         return <HomeScreen />
     }

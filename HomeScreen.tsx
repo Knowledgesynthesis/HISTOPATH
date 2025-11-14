@@ -109,6 +109,21 @@ export default function HomeScreen() {
 
         <Card
           className="cursor-pointer hover:bg-accent transition-colors"
+          onClick={() => navigateTo('cases')}
+        >
+          <CardHeader>
+            <div className="flex items-center gap-3">
+              <Microscope className="w-8 h-8 text-primary" />
+              <div>
+                <CardTitle className="text-lg">Clinical Cases</CardTitle>
+                <CardDescription>Integrated case studies</CardDescription>
+              </div>
+            </div>
+          </CardHeader>
+        </Card>
+
+        <Card
+          className="cursor-pointer hover:bg-accent transition-colors"
           onClick={() => navigateTo('assessment')}
         >
           <CardHeader>
